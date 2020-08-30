@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: white;
+                float: none;
+                width: 100%;
+                height: 100%;
+            }
+            .header{
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                width: 100%;
+            }
+            nav{
+                display: inline-block;
+                align-content: center;
+                background-color: rgb(0, 34, 91);
+                padding: 1rem 1rem;
+                width: 100%;
+            }
+            nav a.nav-element{
+                display: inline-block;
+                text-align: center;
+                margin: 0.5rem 0.5rem;
+                background-color:  rgb(0, 34, 91);
+                border-color: azure;
+                border-left-style: solid;
+                width: 10%;
+                color:white;
+                padding: 1rem 1rem;
+                text-decoration: none;
+
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                -webkit-transition-property: color;
+                transition-property: color;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+            }
+            nav a.nav-element:before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #ffffff;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transform-origin: 0 50%;
+                transform-origin: 0 50%;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+            nav a.nav-element:hover, a.nav-element:focus, a.nav-element:active{
+                background-color: rgba(245, 245, 245);
+                color:rgba(51, 51, 51);
+                webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+            a.nav-element:focus, a.nav-element:active{
+                border-bottom-style: solid;
+                border-bottom-color: lightgreen;
+            }
+            nav a.nav-element:hover:before, a.nav-element:focus:before, a.nav-element:active:before{
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+            .iiith-logo-img{
+                width: 50%;
+            }
+            .iiith-logo{
+                display: inline-block;
+                float: left;
+                box-sizing: border-box;
+                margin: 1rem 1rem;
+                text-align: left;
+                vertical-align: middle;
+                padding: 1rem 1rem;
+
+            }
+            .rdip-link a{
+                display: inline-block;
+                float: right;
+                /*-moz-box-align: baseline;*/
+                vertical-align: middle;
+                text-align: center;
+                padding: 1rem 1rem;
+                width: 10%;
+                height: 10%;
+                background:rgb(0, 0, 0);
+                margin: 1.5rem 1rem;
+                text-decoration: none;
+                color: white;
+                border-bottom-style: none;
+            }
+            .rdip-link a:hover{
+                text-decoration: none;
+                color: black;
+                background-color:white;
+                border-bottom-style: solid;
+                border-bottom-color: lightgreen;
+            }
+            /* Registration Form Specific CSS*/
+            .homebody{
+                width:100%;
+                text-align: center;
+            }
+            .registration-form-box{
+                text-align: center;
+                margin: 4rem 4rem;
+                width: 600px;
+                background-color:rgb(200, 255, 168);
+                padding: 5rem 5rem;
+            }
+            .left-part{
+                width:20%;
+                display:inline-block;
+                float: left;
+                text-align:center;
+            }
+            #submit, #reset{
+                background-color: rgb(0, 34, 91);
+                border: none;
+                color: white;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            label{
+                vertical-align: middle;
+                font-style: italic;
+                font-weight:bold;
+            }
+            input[type='text'],input[type='number']{
+                background-color: black;
+                color:#ffffff;
+                padding: 1rem 1rem;
+                width: 20rem;
+                border: none;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'header'>
+            <div class = 'top-header'>
+                <div class = 'iiith-logo'>
+                    <a href="https://www.iiit.ac.in/">
+                        <img src = "https://www.iiit.ac.in/img/iiit-new.png" class = "iiith-logo-img">
+                    </a>
+                </div>
+                <div class = 'rdip-link'>
+                    <a href="https://serc.iiit.ac.in/rdip">
+                        <h1>RDIP</h1>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <a href = 'homepage.html' class = 'nav-element'>Home</a>
+                <a href = 'registration.html' class = 'nav-element'>Registration Form</a>
+                </div>
+            </nav>
+        </div>
+        <!--registration form specific -->
+        
+        <div class="home-body">
+            <div class="registration-form-box">
+                <form class = 'registration-form' method = 'get' action="details.html">
+                    <label for="fname" class = "left-part">First name:</label>
+                    <input type="text" id="fname" name="fname" class = "right-part" required><br><br>
+
+                    <label for="email" class = "left-part">Email:       </label>
+                    <input type="text" id="email" name="email" required><br><br>
+
+                    <label for="phno" class = "left-part">Phone No:     </label>
+                    <input type="number" id="phno" name="phno" required><br><br>
+
+                    <label for="gender" class = "left-part">Gender:     </label>
+                    <div class = "right-part">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label> 
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label><br><br>
+                    </div>
+                    <!-- validation of checkboxes as a group, and permission to check only one and proceed requires more than HTML, CSS (JavaScript/JQuery/AngularJS)-->
+                    <label for="reason" class = "left-part">Reason for RDIP:    </label>
+                    <div class = "right-part">
+                    <input type="checkbox" id="html" name="reason" value="html" required>
+                    <label for="html">HTML</label> 
+                    <input type="checkbox" id="css" name="reason" value="css" required>
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript" name="reason" value="javascript" required>
+                    <label for="javascript">JavaScript</label><br><br>
+                    </div>
+
+                    <label for="college" class = "left-part">College:     </label>
+                    <div class = "right-part"><input type="text" id="college" name="college" required><br><br></div>
+
+                    <div class = "left-part"><input type="checkbox" id="truth-declare" name="truth-declare" value="Entries declared as true" required></div>
+                    <label for="truth-declare" class = "right-part">I declare above details given by me are true.</label><br><br>
+                    
+                    <div class = "left-part"><input type="submit" value="Submit" id = "submit"></div>
+                    <input type="reset" value="Reset" class = "right-part" id = 'reset'>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
